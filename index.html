@@ -9,15 +9,20 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            min-height: 100vh;
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #333;
+        }
+
+        .hero {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 40px;
         }
 
-        .container {
+        .box {
             background: white;
             max-width: 900px;
             padding: 40px;
@@ -26,9 +31,8 @@
         }
 
         h1 {
-            color: #111;
-            margin-bottom: 15px;
             font-size: 36px;
+            margin-bottom: 15px;
         }
 
         p {
@@ -46,8 +50,7 @@
             text-decoration: none;
             font-size: 18px;
             border-radius: 30px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-bottom: 35px;
+            transition: 0.3s;
         }
 
         .btn:hover {
@@ -55,51 +58,89 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
-        .images {
+        /* قسم القائمة */
+        .menu {
+            background: #f5f5f5;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .products {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
-        .images img {
-            width: 280px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #dd2476;
         }
 
         footer {
-            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
             font-size: 14px;
-            color: #888;
+            color: #aaa;
+            background: #111;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <h1>مرحباً بكم في ELIXR ⚡</h1>
-        <p>
-            ELIXR هو مشروب الطاقة الذي يمنحك القوة، التركيز، والانطلاقة
-            لتتجاوز حدودك وتحقق أفضل أداء.
-        </p>
-
-        <!-- زر -->
-        <a href="#" class="btn">اكتشف الطاقة الآن</a>
-
-        <!-- الصور -->
-        <div class="images">
-            <img src="images1.jpg" alt="ELIXR Image 1">
-            <img src="images2.jpg" alt="ELIXR Image 2">
+    <!-- القسم الترحيبي -->
+    <section class="hero">
+        <div class="box">
+            <h1>مرحباً بكم في متجرنا ELIXR ⚡</h1>
+            <p>
+                مشروب الطاقة يمنحك القوة والتركيز والانطلاقة
+                لتعيش يومك بأقصى طاقة.
+            </p>
+            <a href="#menu" class="btn">اكتشف الآن</a>
         </div>
+    </section>
 
-        <footer>
-            © 2025 ELIXR Energy Drink. All Rights Reserved.
-        </footer>
+    <!-- قائمة المنتجات -->
+    <section class="menu" id="menu">
+        <h2>قائمة المنتجات</h2>
 
-    </div>
+        <div class="products">
+            <div class="product">
+                <img src="images1.jpg" alt="monster Energy 1">
+                <div class="price">1.500 للحبة</div>
+            </div>
+
+            <div class="product">
+                <img src="images2.jpg" alt="monster Energy 2">
+                <div class="price">1.500 للحبة</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 ELIXR Energy Drink. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
